@@ -63,6 +63,9 @@ class MainActivity : AppCompatActivity() {
             2 -> Intent(this, SingleTaskActivity::class.java).apply {
                 putExtra(EXTRA_MESSAGE, message)
             }
+            3 -> Intent(this, SingleInstanceActivity::class.java).apply {
+                putExtra(EXTRA_MESSAGE, message)
+            }
             else -> Intent(this, DisplayMessageActivity::class.java).apply {
                 putExtra(EXTRA_MESSAGE, message)
             }
