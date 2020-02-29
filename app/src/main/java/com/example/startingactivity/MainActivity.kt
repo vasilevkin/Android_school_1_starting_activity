@@ -2,14 +2,15 @@ package com.example.startingactivity
 
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
-
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 
 
 const val EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE"
@@ -48,9 +49,22 @@ class MainActivity : AppCompatActivity() {
         // Do something in response to button
         val editText = findViewById<EditText>(R.id.editText)
         val message = editText.text.toString()
-        val intent = Intent(this, DisplayMessageActivity::class.java).apply {
-            putExtra(EXTRA_MESSAGE, message)
+
+        val index: Int =
+            main_radio_group.indexOfChild(findViewById(main_radio_group.getCheckedRadioButtonId()))
+
+        Log.d("main_index", "index = $index")
+
+        val intent: Intent
+        intent = when (index) {
+            1 -> Intent(this, SingleTopActivity::class.java).apply {
+                putExtra(EXTRA_MESSAGE, message)
+            }
+            else -> Intent(this, DisplayMessageActivity::class.java).apply {
+                putExtra(EXTRA_MESSAGE, message)
+            }
         }
+
         startActivity(intent)
     }
 }
