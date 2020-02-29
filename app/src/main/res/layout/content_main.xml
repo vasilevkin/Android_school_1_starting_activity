@@ -27,7 +27,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:onClick="sendMessage"
-        android:text="Button"
+        android:text="@string/start_a_new_activity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
@@ -43,25 +43,25 @@
             android:id="@+id/radioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="standard" />
+            android:text="@string/radio_button_standard" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="singleTop" />
+            android:text="@string/radio_button_singletop" />
 
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="singleTask" />
+            android:text="@string/radio_button_singletask" />
 
         <RadioButton
             android:id="@+id/radioButton4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="singleInstance" />
+            android:text="@string/radio_button_singleinstance" />
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
