@@ -1,4 +1,4 @@
-package com.example.startingactivity
+package com.example.starting_activity
 
 import org.junit.Test
 

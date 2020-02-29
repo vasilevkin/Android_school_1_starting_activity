@@ -1,4 +1,4 @@
-package com.example.startingactivity
+package com.example.starting_activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -51,25 +51,18 @@ class MainActivity : AppCompatActivity() {
         val message = editText.text.toString()
 
         val index: Int =
-            main_radio_group.indexOfChild(findViewById(main_radio_group.getCheckedRadioButtonId()))
+            main_radio_group.indexOfChild(findViewById(main_radio_group.checkedRadioButtonId))
 
         Log.d("main_index", "index = $index")
 
         val intent: Intent
         intent = when (index) {
-            1 -> Intent(this, SingleTopActivity::class.java).apply {
-                putExtra(EXTRA_MESSAGE, message)
-            }
-            2 -> Intent(this, SingleTaskActivity::class.java).apply {
-                putExtra(EXTRA_MESSAGE, message)
-            }
-            3 -> Intent(this, SingleInstanceActivity::class.java).apply {
-                putExtra(EXTRA_MESSAGE, message)
-            }
-            else -> Intent(this, StandardActivity::class.java).apply {
-                putExtra(EXTRA_MESSAGE, message)
-            }
+            1 -> Intent(this, SingleTopActivity::class.java)
+            2 -> Intent(this, SingleTaskActivity::class.java)
+            3 -> Intent(this, SingleInstanceActivity::class.java)
+            else -> Intent(this, StandardActivity::class.java)
         }
+        intent.putExtra(EXTRA_MESSAGE, message)
 
         startActivity(intent)
     }

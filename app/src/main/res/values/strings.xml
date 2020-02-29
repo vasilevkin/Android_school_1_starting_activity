@@ -11,4 +11,5 @@
     <string name="single_task_launch_mode">singleTask launch mode, %1$s</string>
     <string name="single_top_launch_mode">singleTop launch mode, %1$s</string>
     <string name="standard_launch_mode">standard launch mode, %1$s</string>
+    <string name="main_hint">Enter some text</string>
 </resources>
