@@ -7,4 +7,8 @@
     <string name="radio_button_singletask">singleTask</string>
     <string name="radio_button_singleinstance">singleInstance</string>
     <string name="default_text_in_the_textview">Default text in the TextView</string>
+    <string name="single_instance_launch_mode">singleInstance launch mode, %1$s</string>
+    <string name="single_task_launch_mode">singleTask launch mode, %1$s</string>
+    <string name="single_top_launch_mode">singleTop launch mode, %1$s</string>
+    <string name="standard_launch_mode">standard launch mode, %1$s</string>
 </resources>

@@ -14,8 +14,8 @@ class SingleTaskActivity : AppCompatActivity() {
         val message = intent.getStringExtra(EXTRA_MESSAGE)
 
         // Capture the layout's TextView and set the string as its text
-        val textView = findViewById<TextView>(R.id.textView).apply {
-            text = "singleTask launch mode, " + message
+        findViewById<TextView>(R.id.textView).apply {
+            text = String.format(context.getString(R.string.single_task_launch_mode), message)
         }
     }
 }
