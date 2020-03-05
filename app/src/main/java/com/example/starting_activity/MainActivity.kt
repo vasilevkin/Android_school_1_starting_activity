@@ -47,7 +47,6 @@ class MainActivity : AppCompatActivity() {
     /** Called when the user taps the Send button */
     fun sendMessage(view: View) {
         // Do something in response to button
-        val editText = findViewById<EditText>(R.id.editText)
         val message = editText.text.toString()
 
         val index: Int =
